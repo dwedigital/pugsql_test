@@ -14,6 +14,8 @@ DB = os.getenv("DATABASE")
 queries = pugsql.module('queries/')
 queries.connect(DB)
 
+def create_table():
+    queries.create_table()
 
 def create_users(qty):
     for i in range(qty):
