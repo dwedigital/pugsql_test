@@ -20,3 +20,5 @@ A very top level demo of working with PugSQL in place of using an ORM
 * update - takes an id and a string for first_name
 * delete - takes an user id and deletes the row
 
+e.g. `python app.py make_users 50` - this will create 50 dummy users
+
