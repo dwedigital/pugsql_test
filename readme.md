@@ -11,8 +11,12 @@ A very top level demo of working with PugSQL in place of using an ORM
 
 `python app.py create`
 
+* you can then use the below make_users method to populate the table
+
 ## Available methods
 
+* make_users - takes a number for the number of fake uses you want to create
 * find - takes an id and returns the user
 * update - takes an id and a string for first_name
 * delete - takes an user id and deletes the row
+
