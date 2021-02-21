@@ -5,9 +5,10 @@ name = "pypi"
 
 [packages]
 pugsql = "*"
-black = "*"
 python-dotenv = "*"
 faker = "*"
+fastapi = "*"
+uvicorn = "*"
 
 [dev-packages]
 
