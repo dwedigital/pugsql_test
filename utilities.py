@@ -39,9 +39,6 @@ if __name__ == "__main__":
     elif sys.argv[1] == "delete":
         db.delete_user(sys.argv[2])
 
-    elif sys.argv[1] == "create":
-        db.create_table()
-
     elif sys.argv[1] == "make-table":
         db.make_table()
 
