@@ -18,7 +18,7 @@ def create_users(qty):
             "phone": fake.phone_number()})
 
 def find_user(id):
-    user = db.find_user(id)
+    user = db.find_user_id(id)
     print(user)
 
 def update_user(id, first_name):
@@ -30,8 +30,8 @@ def delete_user(id):
 if __name__ == "__main__":
     # user can add a number of users as an argument
     if sys.argv[1] == "create":
-
         db.create_users(int(sys.argv[2]))
+        
     elif sys.argv[1] == "find":
         find_user(sys.argv[2])
     
@@ -40,6 +40,9 @@ if __name__ == "__main__":
 
     elif sys.argv[1] == "delete":
         delete_user(int(sys.argv[2]))
+
+    elif sys.argv[1] == "make-table":
+        db.make_table()
 
     else:
         print("No option selected")

@@ -14,6 +14,9 @@ DB = os.getenv("DATABASE")
 queries = pugsql.module('queries/')
 queries.connect(DB)
 
+def make_table():
+    queries.create_user_table
+
 def create_user(
     title,
     first_name,
@@ -30,12 +33,12 @@ def create_user(
 
 def create_users(qty):
     for i in range(qty):
-        queries.create_user({
-            "title": fake.prefix(),
-            'first_name': fake.first_name(),
-            "last_name": fake.last_name(),
-            "email": fake.email(),
-            "phone": fake.phone_number()})
+        create_user(
+            title= fake.prefix(),
+            first_name =  fake.first_name(),
+            last_name =  fake.last_name(),
+            email =  fake.email(),
+            phone = fake.phone_number())
 
 def find_user_id(id):
     user = queries.find_user_id(user_id = id)
