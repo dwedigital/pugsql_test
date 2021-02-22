@@ -7,6 +7,8 @@ name = "pypi"
 pugsql = "*"
 python-dotenv = "*"
 faker = "*"
+fastapi = "*"
+uvicorn = "*"
 
 [dev-packages]
 
