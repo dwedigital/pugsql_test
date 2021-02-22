@@ -1,5 +1,6 @@
 import dbMethods as db
 import sys
+import Faker
 
 # initiate faker to create dummy data
 fake = Faker()
