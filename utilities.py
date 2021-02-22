@@ -1,7 +1,4 @@
-import pugsql
-from faker import Faker
-import db
-from dotenv import load_dotenv
+import dbMethods as db
 import sys
 
 # initiate faker to create dummy data
@@ -33,13 +30,16 @@ if __name__ == "__main__":
         db.create_users(int(sys.argv[2]))
         
     elif sys.argv[1] == "find":
-        find_user(sys.argv[2])
+        db.find_user(sys.argv[2])
     
     elif sys.argv[1] == "update":
-        update_user(sys.argv[2], sys.argv[3])
+        db.update_user(sys.argv[2], sys.argv[3])
 
     elif sys.argv[1] == "delete":
-        delete_user(int(sys.argv[2]))
+        db.delete_user(sys.argv[2])
+
+    elif sys.argv[1] == "create":
+        db.create_table()
 
     elif sys.argv[1] == "make-table":
         db.make_table()

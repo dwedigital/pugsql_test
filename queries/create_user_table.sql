@@ -1,4 +1,4 @@
--- :name create_user_table
+-- :name create_table
 
 CREATE TABLE users (
 	user_id INTEGER PRIMARY KEY,
