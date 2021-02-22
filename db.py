@@ -37,8 +37,16 @@ def create_users(qty):
             "email": fake.email(),
             "phone": fake.phone_number()})
 
-def find_user(id):
-    user = queries.find_user(user_id = id)
+def find_user_id(id):
+    user = queries.find_user_id(user_id = id)
+    return(user)
+
+def find_user_email(email):
+    user = queries.find_user_email(user_email = email)
+    return(user)
+
+def find_user_phone(phone):
+    user = queries.find_user_phone(user_phone = phone)
     return(user)
 
 def update_user(id,
@@ -60,5 +68,8 @@ def delete_user(id):
 
 def get_users():
     users =  queries.get_users()
-    print(users)
     return users
+
+def get_count():
+    count = queries.get_count()
+    return count

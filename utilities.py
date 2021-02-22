@@ -3,7 +3,6 @@ from faker import Faker
 import db
 from dotenv import load_dotenv
 import sys
-import os
 
 # initiate faker to create dummy data
 fake = Faker()
@@ -32,7 +31,7 @@ if __name__ == "__main__":
     # user can add a number of users as an argument
     if sys.argv[1] == "create":
 
-        create_users(int(sys.argv[2]))
+        db.create_users(int(sys.argv[2]))
     elif sys.argv[1] == "find":
         find_user(sys.argv[2])
     
